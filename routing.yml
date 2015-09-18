@@ -1,0 +1,93 @@
+
+
+_demo_secured:
+    resource: "@AcmeDemoBundle/Controller/SecuredController.php"
+    type:     annotation
+
+_demo:
+    resource: "@AcmeDemoBundle/Controller/DemoController.php"
+    type:     annotation
+    prefix:   /demo
+    
+truthiness_check_web_deleteUser:
+    path:     /link
+    defaults: { _controller: AcmeDemoBundle:Demo:link }      
+
+
+sample_email:
+    pattern:  /login/{_locale}.{_format}
+    defaults: { _controller: AcmeDemoBundle:Demo:login, _format: json, _locale: en}
+    requirements:
+        _method:  GET|POST 
+        _format: JSON   
+        
+        
+sample_register:
+    pattern:  /register/{_locale}.{_format}
+    defaults: { _controller: AcmeDemoBundle:Demo:register, _format: json, _locale: en}
+    requirements:
+        _method:  POST 
+        _format: JSON           
+              
+        
+sample_quesions:
+    pattern:  /questions/{_locale}.{_format}
+    defaults: { _controller: AcmeDemoBundle:Demo:getQuestions, _format: json, _locale: en}
+    requirements:
+        _method:  GET|POST 
+        _format: JSON  
+        
+        
+sample_push:
+    pattern:  /push
+    defaults: { _controller: AcmeDemoBundle:Demo:push }
+    requirements:
+        _method:  GET|POST 
+           
+                 
+              
+create_quesions:
+    pattern:  /createQuestion/{_locale}.{_format}
+    defaults: { _controller: AcmeDemoBundle:Demo:createQuestions, _format: json, _locale: en}
+    requirements:
+        _method:  GET|POST 
+        _format: JSON   
+        
+create_quesionsss:
+    pattern:  /viewQuestions/{_locale}.{_format}
+    defaults: { _controller: AcmeDemoBundle:Demo:viewQuestions, _format: json, _locale: en}
+    requirements:
+        _method:  GET|POST 
+        _format: JSON   
+        
+create_answers:
+    pattern:  /answer/{_locale}.{_format}
+    defaults: { _controller: AcmeDemoBundle:Demo:answer, _format: json, _locale: en}
+    requirements:
+        _method:  GET|POST 
+        _format: JSON           
+                 
+create_answerss:
+    pattern:  /answerDetail/{_locale}.{_format}
+    defaults: { _controller: AcmeDemoBundle:Demo:answerDetail, _format: json, _locale: en}
+    requirements:
+        _method:  GET|POST 
+        _format: JSON    
+        
+        
+create_fbLogin:
+    pattern:  /fbLogin/{_locale}.{_format}
+    defaults: { _controller: AcmeDemoBundle:Demo:fbLogin, _format: json, _locale: en}
+    requirements:
+        _method:  GET|POST 
+        _format: JSON     
+        
+        
+
+     
+        
+             
+              
+        
+                                      
+            
